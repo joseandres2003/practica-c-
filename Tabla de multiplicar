@@ -1,0 +1,23 @@
+/*
+Titulo: tabla de multiplicacion
+Autor: Luis Rodrigo Aguilar Justiniano
+Descripcion: Realizar un programa que imprima una tabla de multiplicacion que sea ingresado por el usuario. 
+Fecha:2024 - 01 - 17
+*/
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+	// Solicitar al usuario que ingrese un número
+	std::cout << "Ingresa un número para ver su tabla de multiplicar: ";
+	int numero;
+	std::cin >> numero;
+	
+	// Imprimir la tabla de multiplicar usando un bucle for
+	std::cout << "Tabla de multiplicar de " << numero << ":\n";
+	for (int i = 1; i <= 10; ++i) {
+	// Calcular e imprimir el resultado de la multiplicación
+	std::cout << numero << " x " << i << " = " << (numero * i) << std::endl;
+	}
+	return 0;
+}
