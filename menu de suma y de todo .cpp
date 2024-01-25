@@ -3,21 +3,21 @@
 
 using namespace std;
 
-// Función para ingresar números
+// FunciÃ³n para ingresar nÃºmeros
 void ingresarNumeros(vector<int> &numeros) {
 	int n;
-	cout << "Ingrese la cantidad de números: ";
+	cout << "Ingrese la cantidad de nÃºmeros: ";
 	cin >> n;
 	
 	numeros.resize(n);
 	
-	cout << "Ingrese los números, separados por espacios:" << endl;
+	cout << "Ingrese los nÃºmeros, separados por espacios:" << endl;
 	for (int i = 0; i < n; ++i) {
 		cin >> numeros[i];
 	}
 }
 
-// Función para sumar los números
+// FunciÃ³n para sumar los nÃºmeros
 int sumarNumeros(const vector<int> &numeros) {
 	int suma = 0;
 	for (int num : numeros) {
@@ -26,7 +26,7 @@ int sumarNumeros(const vector<int> &numeros) {
 	return suma;
 }
 
-// Función para verificar si un número es primo
+// FunciÃ³n para verificar si un nÃºmero es primo
 bool esPrimo(int numero) {
 	if (numero <= 1) {
 		return false;
@@ -44,13 +44,13 @@ int main() {
 	int opcion;
 	
 	do {
-		// Mostrar el menú
+		// Mostrar el menÃº
 		cout << "\nMENU\n";
-		cout << "1. Ingresar números\n";
-		cout << "2. Sumar los números\n";
-		cout << "3. Verificar si un número es primo\n";
+		cout << "1. Ingresar nÃºmeros\n";
+		cout << "2. Sumar los nÃºmeros\n";
+		cout << "3. Verificar si un nÃºmero es primo\n";
 		cout << "0. Salir\n";
-		cout << "Ingrese su opción: ";
+		cout << "Ingrese su opciÃ³n: ";
 		cin >> opcion;
 		
 		switch (opcion) {
@@ -59,27 +59,27 @@ int main() {
 			break;
 		case 2:
 			if (numeros.empty()) {
-				cout << "No hay números para sumar. Ingrese números primero." << endl;
+				cout << "No hay nÃºmeros para sumar. Ingrese nÃºmeros primero." << endl;
 			} else {
-				cout << "La suma de los números es: " << sumarNumeros(numeros) << endl;
+				cout << "La suma de los nÃºmeros es: " << sumarNumeros(numeros) << endl;
 			}
 			break;
 		case 3: {
 			int num;
-			cout << "Ingrese el número a verificar: ";
+			cout << "Ingrese el nÃºmero a verificar: ";
 			cin >> num;
 			if (esPrimo(num)) {
-				cout << num << " es un número primo." << endl;
+				cout << num << " es un nÃºmero primo." << endl;
 			} else {
-				cout << num << " no es un número primo." << endl;
+				cout << num << " no es un nÃºmero primo." << endl;
 			}
 			break;
 		}
 		case 0:
-			cout << "Saliendo del programa. ¡Hasta luego!" << endl;
+			cout << "Saliendo del programa. Â¡Hasta luego!" << endl;
 			break;
 		default:
-			cout << "Opción no válida. Intente de nuevo." << endl;
+			cout << "OpciÃ³n no vÃ¡lida. Intente de nuevo." << endl;
 		}
 		
 	} while (opcion != 0);
