@@ -4,30 +4,30 @@
 
 using namespace std;
 
-// Función que realiza la suma de los números presentes en una cadena
+// FunciÃ³n que realiza la suma de los nÃºmeros presentes en una cadena
 int suma_cadena(const string& cadena) {
 	size_t pos = 0;
 	int resultado = 0;
 	
-	// Iterar a través de la cadena
+	// Iterar a travÃ©s de la cadena
 	while (pos < cadena.length()) {
 		string numero_str;
-		// Construir el número dígito por dígito
+		// Construir el nÃºmero dÃ­gito por dÃ­gito
 		while (pos < cadena.length() && isdigit(cadena[pos])) {
 			numero_str += cadena[pos];
 			pos++;
 		}
-		// Si se encontró un número, sumarlo al resultado
+		// Si se encontrÃ³ un nÃºmero, sumarlo al resultado
 		if (!numero_str.empty()) {
 			resultado += stoi(numero_str);
 		}
-		pos++; // Ignorar el signo de más
+		pos++; // Ignorar el signo de mÃ¡s
 	}
 	
 	return resultado;
 }
 
-// Función que intercambia el nombre y el apellido, con la primera letra en mayúscula
+// FunciÃ³n que intercambia el nombre y el apellido, con la primera letra en mayÃºscula
 string nombre_apellido(const string& cadena) {
 	size_t primer_espacio = cadena.find(' ');
 	if (primer_espacio != string::npos && primer_espacio + 1 < cadena.length()) {
@@ -41,12 +41,12 @@ string nombre_apellido(const string& cadena) {
 		string apellido1 = cadena.substr(primer_espacio + 1, segundo_espacio - primer_espacio - 1);
 		string apellido2 = cadena.substr(segundo_espacio + 1);
 		
-		// Convertir la primera letra del nombre a mayúscula
+		// Convertir la primera letra del nombre a mayÃºscula
 		if (!nombre.empty()) {
 			nombre[0] = toupper(nombre[0]);
 		}
 		
-		// Convertir la primera letra de ambos apellidos a mayúscula
+		// Convertir la primera letra de ambos apellidos a mayÃºscula
 		if (!apellido1.empty()) {
 			apellido1[0] = toupper(apellido1[0]);
 		}
@@ -62,10 +62,10 @@ string nombre_apellido(const string& cadena) {
 	}
 }
 
-// Función que ofusca ciertos caracteres en la cadena
+// FunciÃ³n que ofusca ciertos caracteres en la cadena
 string ofuscar(const string& cadena) {
 	string resultado = cadena;
-	// Reemplazar caracteres específicos por otros
+	// Reemplazar caracteres especÃ­ficos por otros
 	for (char& c : resultado) {
 		switch (c) {
 		case 'A': case 'a': c = '4'; break;
@@ -81,7 +81,7 @@ string ofuscar(const string& cadena) {
 
 int main() {
 	while (true) {
-		// Menú principal
+		// MenÃº principal
 		cout << "\nMENU PRINCIPAL" << endl;
 		cout << "1 - String suma de una cadena" << endl;
 		cout << "2 - String Nombre y Apellido" << endl;
@@ -94,7 +94,7 @@ int main() {
 		
 		switch (opcion) {
 		case '1': {
-			// Opción para la suma de números en una cadena
+			// OpciÃ³n para la suma de nÃºmeros en una cadena
 			string cadena;
 			cout << "Ingrese la cadena para la suma: ";
 			cin >> cadena;
@@ -104,7 +104,7 @@ int main() {
 		}
 		
 		case '2': {
-			// Opción para invertir nombre y apellido con la primera letra en mayúscula
+			// OpciÃ³n para invertir nombre y apellido con la primera letra en mayÃºscula
 			string cadena;
 			cin.ignore(); // Limpiar el buffer del teclado
 			cout << "Ingrese el nombre y apellidos: ";
@@ -115,7 +115,7 @@ int main() {
 		}
 		
 		case '3': {
-			// Opción para ofuscar ciertos caracteres en una cadena
+			// OpciÃ³n para ofuscar ciertos caracteres en una cadena
 			string cadena;
 			cout << "Ingrese la cadena para ofuscar: ";
 			cin >> cadena;
@@ -129,7 +129,7 @@ int main() {
 			return 0;
 			
 		default:
-			cout << "Opcion no válida. Inténtelo de nuevo." << endl;
+			cout << "Opcion no valida. IntÃ©ntelo de nuevo." << endl;
 		}
 	}
 	
