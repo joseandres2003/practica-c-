@@ -129,7 +129,7 @@ int main() {
 			return 0;
 			
 		default:
-			cout << "Opcion no valida. Inténtelo de nuevo." << endl;
+			cout << "Opcion no valida. Intentelo de nuevo." << endl;
 		}
 	}
 	
